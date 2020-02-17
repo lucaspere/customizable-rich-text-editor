@@ -7,7 +7,7 @@ import './editor.css'
 const Editor = (props) => {
 
    return (
-      <div>
+      <div className="editor">
          <DraftEditor 
              placeholder="Personalize seu texto do jeito que quiser"
              editorState={props.editorState}
