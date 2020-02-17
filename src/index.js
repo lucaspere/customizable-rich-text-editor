@@ -1,10 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import * as serviceWorker from './serviceWorker';
+import Layout from './layout/layout'
 
 
 const app = (
-   <h1>Oi</h1>
+   <Layout>
+      <h1>Oi</h1>
+   </Layout>
 )
 
 ReactDOM.render(app, document.getElementById('root'));
