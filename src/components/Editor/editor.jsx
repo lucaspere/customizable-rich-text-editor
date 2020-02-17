@@ -1,6 +1,8 @@
 import React from 'react';
 import {Editor as DraftEditor} from 'draft-js'
 
+import './editor.css'
+
 
 const Editor = (props) => {
 
