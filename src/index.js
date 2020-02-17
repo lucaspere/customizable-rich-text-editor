@@ -2,11 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import * as serviceWorker from './serviceWorker';
 import Layout from './layout/layout'
-
+import RichTextEditor from './components/richTextEditor'
 
 const app = (
    <Layout>
-      <h1>Oi</h1>
+      <RichTextEditor />
    </Layout>
 )
 
