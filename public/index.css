@@ -1,0 +1,21 @@
+html {
+   height: 100%;
+   -ms-text-size-adjust: 100%;
+   -webkit-text-size-adjust: 100%;
+   box-sizing: border-box;
+}
+body {
+   position: relative;
+   padding-bottom: 5.5rem;
+   min-height: 100%;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+}
+a {
+   background-color: transparent;
+   -webkit-text-decoration-skip: objects;
+ }
+
+ a:hover {
+   outline-width: 0;
+ }

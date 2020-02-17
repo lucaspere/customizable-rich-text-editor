@@ -2,7 +2,7 @@ import React from 'react';
 
 
 const Layout = (props) => (
-   <div>
+   <div className="container">
       {props.children}
    </div>
 )
