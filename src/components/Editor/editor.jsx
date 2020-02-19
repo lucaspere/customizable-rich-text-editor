@@ -1,17 +1,35 @@
 import React from 'react';
-import {Editor as DraftEditor} from 'draft-js'
+import { Editor as DraftEditor, RichUtils } from 'draft-js'
 
 import './editor.css'
+import StylingBar from '../StylingBar/stylingBar';
 
 
-const Editor = (props) => {
+const Editor = ({ editorState, setEditorState }) => {
+
+   const handleKeyCommand = (command, editorState) => {
+      const newState = RichUtils.handleKeyCommand(editorState, command)
+
+      if (newState) {
+         setEditorState(newState)
+
+         return 'handled';
+      }
+
+      return 'not-handled'
+   }
 
    return (
       <div className="editor">
-         <DraftEditor 
-             placeholder="Personalize seu texto do jeito que quiser"
-             editorState={props.editorState}
-             onChange={props.setEditorState}
+         <StylingBar
+            editorState={editorState}
+            setEditorState={setEditorState}
+         />
+         <DraftEditor
+            placeholder="Personalize seu texto do jeito que quiser"
+            editorState={editorState}
+            onChange={setEditorState}
+            handleKeyCommand={handleKeyCommand}
          />
       </div>
    )
