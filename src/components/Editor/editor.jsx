@@ -21,10 +21,6 @@ const Editor = ({ editorState, setEditorState }) => {
 
    return (
       <div className="editor">
-         <StylingBar
-            editorState={editorState}
-            setEditorState={setEditorState}
-         />
          <DraftEditor
             placeholder="Personalize seu texto do jeito que quiser"
             editorState={editorState}
