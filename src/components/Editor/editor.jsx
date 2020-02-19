@@ -2,6 +2,7 @@ import React from 'react';
 import { Editor as DraftEditor, RichUtils } from 'draft-js'
 
 import './editor.css'
+import StylingBar from '../StylingBar/stylingBar';
 
 
 const Editor = ({ editorState, setEditorState }) => {
@@ -9,7 +10,7 @@ const Editor = ({ editorState, setEditorState }) => {
    const handleKeyCommand = (command, editorState) => {
       const newState = RichUtils.handleKeyCommand(editorState, command)
 
-      if(newState) {
+      if (newState) {
          setEditorState(newState)
 
          return 'handled';
@@ -20,6 +21,10 @@ const Editor = ({ editorState, setEditorState }) => {
 
    return (
       <div className="editor">
+         <StylingBar
+            editorState={editorState}
+            setEditorState={setEditorState}
+         />
          <DraftEditor
             placeholder="Personalize seu texto do jeito que quiser"
             editorState={editorState}
