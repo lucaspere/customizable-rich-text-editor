@@ -8,6 +8,9 @@ const StylingBar = ({ editorState, setEditorState }) => {
       {
          name: 'bold',
          type: 'BOLD',
+      },{
+         name: 'code',
+         type: 'CODE'
       }
    ]
    return (
