@@ -17,6 +17,10 @@ const RichTextEditor = () => {
 
    return (
       <div>
+         <StylingBar
+            editorState={editorState}
+            setEditorState={setEditorState}
+         />
          <Editor
             editorState={editorState}
             setEditorState={setEditorState}
