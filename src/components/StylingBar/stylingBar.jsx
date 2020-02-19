@@ -4,13 +4,24 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const StylingBar = ({ editorState, setEditorState }) => {
 
+   const inline = [
+      {
+         name: 'bold',
+         type: 'BOLD',
+      }
+   ]
    return (
       <div>
-         <button onClick={() => setEditorState(RichUtils.toggleInlineStyle(editorState, 'BOLD'))}>
-            <FontAwesomeIcon icon="bold" />
-         </button>
+         {inline.map((item, idx) => (
+            <button
+               onClick={() => setEditorState(RichUtils.toggleInlineStyle(editorState, item.type))}
+               key={`${item.name}: ${idx}`}
+            >
+               <FontAwesomeIcon icon={item.name} />
+            </button>
+         ))}
       </div>
-         )
+   )
 }
 
 export default StylingBar
