@@ -21,7 +21,10 @@ const StylingBar = ({ editorState, setEditorState }) => {
    ]
 
    const block = [
-
+      {
+         name: 'heading',
+         type: 'header-one',
+      }, 
    ]
    return (
       <div>
