@@ -30,6 +30,9 @@ const StylingBar = ({ editorState, setEditorState }) => {
       }, {
          name: 'list-ul',
          type: 'unordered-list-item'
+      }, {
+         name: 'list-ol',
+         type: 'ordered-list-item'
       }
    ]
    return (
