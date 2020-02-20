@@ -24,7 +24,10 @@ const StylingBar = ({ editorState, setEditorState }) => {
       {
          name: 'heading',
          type: 'header-one',
-      }, 
+      }, {
+         name: 'quote-right',
+         type: 'blockquote'
+      }
    ]
    return (
       <div>
