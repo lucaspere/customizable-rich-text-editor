@@ -11,7 +11,10 @@ const StylingBar = ({ editorState, setEditorState }) => {
       },{
          name: 'code',
          type: 'CODE'
-      }
+      }, {
+         name: 'underline',
+         type: 'UNDERLINE'
+      },
    ]
    return (
       <div>
