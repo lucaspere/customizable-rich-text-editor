@@ -36,8 +36,8 @@ const StylingBar = ({ editorState, setEditorState }) => {
       }
    ]
    return (
-      <div>
-         <div>
+      <div className="stylingBar">
+         <div className="inlineContent">
             {inline.map((item, idx) => (
                <button
                   onClick={() => setEditorState(RichUtils.toggleInlineStyle(editorState, item.type))}
@@ -47,7 +47,7 @@ const StylingBar = ({ editorState, setEditorState }) => {
                </button>
             ))}
          </div>
-         <div>
+         <div className="blockContent">
             {block.map((item, idx) => (
                <button
                   onClick={() => setEditorState(RichUtils.toggleBlockType(editorState, item.type))}
