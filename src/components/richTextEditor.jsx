@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faBold, faCode, faItalic, faUnderline, faHeading, faQuoteRight} from '@fortawesome/free-solid-svg-icons';
+import { faBold, faCode, faItalic, faUnderline, faHeading, faQuoteRight, faListUl} from '@fortawesome/free-solid-svg-icons';
 import { EditorState } from 'draft-js';
 
 import Editor from './Editor/editor';
@@ -8,7 +8,7 @@ import StylingBar from './StylingBar/stylingBar';
 
 import './richTextEditor.css';
 
-library.add(faBold, faCode, faItalic, faUnderline, faHeading, faQuoteRight)
+library.add(faBold, faCode, faItalic, faUnderline, faHeading, faQuoteRight, faListUl)
 
 const RichTextEditor = () => {
    const [editorState, setEditorState] = useState(

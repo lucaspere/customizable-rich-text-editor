@@ -26,7 +26,10 @@ const StylingBar = ({ editorState, setEditorState }) => {
          type: 'header-one',
       }, {
          name: 'quote-right',
-         type: 'blockquote'
+         type: 'blockquote',
+      }, {
+         name: 'list-ul',
+         type: 'unordered-list-item'
       }
    ]
    return (
