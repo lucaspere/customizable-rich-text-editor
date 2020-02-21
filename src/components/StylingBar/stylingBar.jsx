@@ -1,5 +1,5 @@
 import React from 'react';
-import { RichUtils, EditorState } from 'draft-js'
+import { RichUtils } from 'draft-js'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const StylingBar = ({ editorState, setEditorState }) => {

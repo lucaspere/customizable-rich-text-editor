@@ -1,6 +1,15 @@
 import React, { useState } from 'react';
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faBold, faCode, faItalic, faUnderline, faHeading, faQuoteRight, faListUl, faListOl} from '@fortawesome/free-solid-svg-icons';
+import {
+   faBold,
+   faCode,
+   faItalic,
+   faUnderline,
+   faHeading,
+   faQuoteRight,
+   faListUl,
+   faListOl
+} from '@fortawesome/free-solid-svg-icons';
 import { EditorState } from 'draft-js';
 
 import Editor from './Editor/editor';
