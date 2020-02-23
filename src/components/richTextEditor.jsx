@@ -9,7 +9,8 @@ import {
    faQuoteRight,
    faListUl,
    faListOl,
-   faLink
+   faLink,
+   faUnlink
 } from '@fortawesome/free-solid-svg-icons';
 import { EditorState, CompositeDecorator } from 'draft-js';
 
@@ -18,7 +19,7 @@ import StylingBar from './StylingBar/stylingBar';
 
 import './richTextEditor.css';
 
-library.add(faBold, faCode, faItalic, faUnderline, faHeading, faQuoteRight, faListUl, faListOl, faLink)
+library.add(faBold, faCode, faItalic, faUnderline, faHeading, faQuoteRight, faListUl, faListOl, faLink, faUnlink)
 
 const Link = (props) => {
    const { url } = props.contentState.getEntity(props.entityKey).getData();

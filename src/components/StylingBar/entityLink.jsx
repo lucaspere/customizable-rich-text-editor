@@ -34,10 +34,25 @@ const EntityLink = ({ editorState, setEditorState }) => {
       }
    }
 
+   const removeLink = (e) => {
+      e.preventDefault();
+
+      const selection = editorState.getSelection();
+
+      if(!selection.isCollapsed()) {
+         setEditorState(
+            RichUtils.toggleLink(editorState, selection, null)
+         )
+      }
+   }
+
    return (
       <div>
          <button onClick={onPromptForLink}>
             <FontAwesomeIcon icon="link" />
+         </button>
+         <button onClick={removeLink}>
+            <FontAwesomeIcon icon="unlink" />
          </button>
       </div>
    )
