@@ -2,7 +2,6 @@ import React from 'react';
 import { Editor as DraftEditor, RichUtils } from 'draft-js'
 
 import './editor.css'
-import StylingBar from '../StylingBar/stylingBar';
 
 
 const Editor = ({ editorState, setEditorState }) => {

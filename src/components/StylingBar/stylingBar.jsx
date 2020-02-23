@@ -1,6 +1,7 @@
 import React from 'react';
-import { RichUtils, EditorState } from 'draft-js'
+import { RichUtils } from 'draft-js'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import EntityLink  from './entityLink';
 
 const StylingBar = ({ editorState, setEditorState }) => {
 
@@ -51,11 +52,17 @@ const StylingBar = ({ editorState, setEditorState }) => {
             {block.map((item, idx) => (
                <button
                   onClick={() => setEditorState(RichUtils.toggleBlockType(editorState, item.type))}
-                  key={`${item.name}: ${idx}`}
+                  key={`${item.name}: ${idx}`}npm
                >
                   <FontAwesomeIcon icon={item.name} />
                </button>
             ))}
+         </div>
+         <div>
+            <EntityLink 
+               editorState={editorState}
+               setEditorState={setEditorState}
+            />
          </div>
       </div>
    )
